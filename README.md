@@ -1,4 +1,4 @@
-![Alt text](/image/first prototype - scatterplot.png?raw=True "Optional Title)
+![Alt text](https://github.com/dennisjunior111/dataviz-RocketLeagueStats/image/first prototype - scatterplot.png?)
 
 ## Rocket League Player Statistics Data Visualization
 Visit my GitHub hosted visualization: [https://dennisjunior111.github.io/dataviz-RocketLeagueStats/](https://dennisjunior111.github.io/dataviz-RocketLeagueStats/)
