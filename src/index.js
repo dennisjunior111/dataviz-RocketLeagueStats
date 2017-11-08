@@ -1,4 +1,4 @@
- var vizDiv = document.getElementById("viz");
+var vizDiv = document.getElementById("viz");
     
     // This stateless component renders a static "wheel" made of circles,
     // and rotates it depending on the value of props.angle.
@@ -123,6 +123,7 @@
               }
             ])
         
+        
         var circles = selection.selectAll(".point").data(d.data);
         circles.exit().remove();
         circles
@@ -145,6 +146,7 @@
       return d3.component("g")
         .render(render);
     }());
+    
     
     // Leverage the d3-tip library for tooltips.
     var tooltip = (function (){
@@ -252,6 +254,12 @@
             value: d.radius,
             action: d.setRadius,
             columns: d.numericColumns
+          },
+          {
+            label: "Filter",
+            value: d.season,
+            action: d.setSeason,
+            columns: d.seasonFilters
           }
         ], d);
         if(!d.loading && selection.style("opacity") === "0"){
@@ -290,11 +298,17 @@
             "Season",
             "Player",
             "Team"
+          ],
+          seasonFilters = [
+            "All Seasons",
+            "1",
+            "2",
+            "3"
           ];
 
       setTimeout(function (){ // Show off the spinner for a few seconds ;)
         d3.csv("data/rkl_3seasons.csv", type, function (data){
-          actions.ingestData(data, numericColumns, ordinalColumns)
+          actions.ingestData(data, numericColumns, ordinalColumns, seasonFilters)
         });
       }, 500);
       
@@ -307,7 +321,6 @@
     }
     
     // ------------------------------------------------------------
-    // 960, 500 - 38
     function reducer (state, action){
       var state = state || {
         width: 960,
@@ -317,15 +330,18 @@
         x: "Win Percentage",
         y: "Misc Score Per Game",
         color: "Season",
-        radius: "Games Played"
+        radius: "Games Played",
+        season: "All Seasons"
       };
       switch (action.type) {
         case "INGEST_DATA":
+          console.log(action.data)
           return Object.assign({}, state, {
             loading: false,
             data: action.data,
             numericColumns: action.numericColumns,
-            ordinalColumns: action.ordinalColumns
+            ordinalColumns: action.ordinalColumns,
+            seasonFilters: action.seasonFilters
           });
         case "SET_X":
           return Object.assign({}, state, { x: action.column });
@@ -334,7 +350,22 @@
         case "SET_COLOR":
           return Object.assign({}, state, { color: action.column });
         case "SET_RADIUS":
+          console.log(action.column)
           return Object.assign({}, state, { radius: action.column });
+        case "SET_SEASON":
+          console.log(action.column)
+          return Object.assign({}, state, { 
+            season: action.column,
+            data: action.data.filter(function(row) {
+            	if (state.season == "All Seasons") {
+            	return row['Season'] == "1" ||
+                   row['Season'] == "2" ||
+            		   row['Season'] == "3";
+            	}
+            	else { return row['Season'] == state.season; }
+            	})
+            
+          });
         default:
           return state;
       }
@@ -342,12 +373,13 @@
     
     function actionsFromDispatch(dispatch){
       return {
-        ingestData: function (data, numericColumns, ordinalColumns){
+        ingestData: function (data, numericColumns, ordinalColumns, seasonFilters){
           dispatch({
             type: "INGEST_DATA",
             data: data,
             numericColumns: numericColumns,
-            ordinalColumns: ordinalColumns
+            ordinalColumns: ordinalColumns,
+            seasonFilters: seasonFilters
           });
         },
         setX: function (column){
@@ -360,7 +392,14 @@
           dispatch({ type: "SET_COLOR", column: column });
         },
         setRadius: function (column){
+          console.log(column)
           dispatch({ type: "SET_RADIUS", column: column });
+        },
+        setSeason: function (data, column){
+          console.log(data)
+          console.log(column)
+          dispatch({ type: "SET_SEASON", column: column,
+                     data:data});
         }
       };
     }
@@ -383,6 +422,8 @@
       store.subscribe(renderApp);
       loadData(actions);
     }
+    
+    
     
     // draw for the first time to initialize
     main();
