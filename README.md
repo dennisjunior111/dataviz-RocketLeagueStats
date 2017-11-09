@@ -19,10 +19,15 @@ The raw data found on Parallel.GG first needed to be processed in order to creat
 My vis serves as an interactive scatter plot where a user can mix-and-match various numerical and categorical player attributes. It demonstrates usage of a new library called d3-component and Redux to create the scatter plot with various menus. The default scatter plot describes an individuals win percentage to their miscellaneous score per game (score which is aquired through objectives such as scoring, assiting, clearing the ball, saving the ball, etc.). The user may select the continuous statistics as either the x-axis or y-axis. One can also select a nominal attribute to color the corresponding circles. One may hover over a specific individual point to view exact statistics for that player.
 
 ## Prototypes
-The very first prototype created was a non-interactive one. It began by displaying only Win Percentage on the X-axis and the Mischelanous Score per Game on the Y-axis. Color of points, and their rad
+The very first prototype created was a non-interactive one. It began by displaying only Win Percentage on the X-axis and the Mischelanous Score per Game on the Y-axis. Color of points depicted the season the data was from, while the radius reflected the Total Games Played. The scatterplot provided insight, but lacked the abilitiy to answer multiple questions on the fly. 
 
-![Alt text](https://github.com/dennisjunior111/dataviz-RocketLeagueStats/blob/master/image/first-prototype-scatterplot.png?raw=true "Initial Scatterplot Prototype")
+![](https://github.com/dennisjunior111/dataviz-RocketLeagueStats/blob/master/image/first-prototype-scatterplot.png?raw=true "Initial Scatterplot Prototype")
 
+I wanted to create a vis that would allow the user to compare correlations between certain player statistics. One may ask who are the best players? This would be easy, and require little interactivity, if the term 'best' was well defined for all individuals. 'Best' for some may be indicated by goals made, while others may see their misc. score or defends to put them on the top. What if 'best' is indicated by multiple statistics? Other questions a user may have could include 'how does my favorite player stack up against others,' or 'which players have unique playstyles?' With these questions in mind, I sketched my interactive vis.
+
+![](https://github.com/dennisjunior111/dataviz-RocketLeagueStats/blob/master/image/first-sketch-scatterplot.jpg "Interactive Vis Sketch")
+
+As you can see, I have not implemted all of my sketched vis. Specifically, my table selection and individual player filtering was cut. This was do to complexity and difficulties learning D3.js. Over time, I hope to create and link my table of players to provide the user the ability to remove or highlight specific individuals throughout the scatterplot who may or may not be close to one another statistically.
 
 ## Sources and Inspirations
 
@@ -37,7 +42,7 @@ The starter code here is from [Stylized Scatter Plot with Color Legend](https://
 This project uses NPM and Webpack. To get started, clone the repository and install dependencies like this:
 
 ```
-cd dataviz-project-template
+cd dataviz-RockLeagueViz
 npm install
 ```
 
