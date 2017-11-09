@@ -21,7 +21,7 @@ My vis serves as an interactive scatter plot where a user can mix-and-match vari
 ## Prototypes
 The very first prototype created was a non-interactive one. It began by displaying only Win Percentage on the X-axis and the Mischelanous Score per Game on the Y-axis. Color of points, and their rad
 
-![Alt text](https://github.com/dennisjunior111/dataviz-RocketLeagueStats/tree/master/image/first-prototype-scatterplot.png?raw=true "Optional Title")
+![Alt text](https://github.com/dennisjunior111/dataviz-RocketLeagueStats/tree/master/image/first-prototype-scatterplot.png?raw=true)
 
 
 ## Sources and Inspirations
