@@ -1,7 +1,7 @@
 ## Rocket League Player Statistics Data Visualization
 Visit my GitHub hosted visualization: [https://dennisjunior111.github.io/dataviz-RocketLeagueStats/](https://dennisjunior111.github.io/dataviz-RocketLeagueStats/)
 
-Feel free to visit my original vis, where I conduct my initial testing on, built with block builder://bl.ocks.org/dennisjunior111/92bf6064cd1d5810be1bd17f67deb95b](http://bl.ocks.org/dennisjunior111/92bf6064cd1d5810be1bd17f67deb95b)
+Feel free to visit my original vis, where I conduct my initial testing on, built with block builder://bl.ocks.org/dennisjunior111/92bf6064cd1d5810be1bd17f67deb95b] (http://blockbuilder.org/dennisjunior111/1827ab0335776631757b303841682bef)
 
 # General Overview
 ## What is Rocket League?
