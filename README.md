@@ -55,6 +55,15 @@ The template project that uses Webpack and D3. Designed as a starting point for 
 
 The starter code here is from [Stylized Scatter Plot with Color Legend](https://bl.ocks.org/curran/ecb09f2605c7fbbadf0eeb75da5f0a6b).
 
+The original vis was built with [blockbuilder.org](http://blockbuilder.org) and was inspired by the following:
+
+forked from <a href='http://bl.ocks.org/curran/'>curran</a>'s block: <a href='http://bl.ocks.org/curran/685fa8300650c4324d571c6b0ecc55de'>Spinner with d3-component</a>
+
+forked from <a href='http://bl.ocks.org/curran/'>curran</a>'s block: <a href='http://bl.ocks.org/curran/8c131a74b85d0bb0246233de2cff3f52'>Scatter Plot with Menus</a>
+
+forked from <a href='http://bl.ocks.org/dennisjunior111/'>dennisjunior111</a>'s block: <a href='http://bl.ocks.org/dennisjunior111/4ecb6acbf63135fbd1cc499edbbd9939'>RKL Test - Scatter Plot with Menus</a>
+
+forked from <a href='http://bl.ocks.org/anonymous/'>anonymous</a>'s block: <a href='http://bl.ocks.org/anonymous/c1eb9248a60ba770931c9abccc1e5e2a'>2 RKL Test - Scatter Plot with Menus</a>
 
 ## How to Run Locally
 This project uses NPM and Webpack. To get started, clone the repository and install dependencies like this:
