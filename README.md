@@ -1,5 +1,5 @@
 ## Rocket League Player Statistics Data Visualization
-Visit my GitHub hosted visualization: [https://dennisjunior111.github.io/dataviz-RocketLeagueStats/](https://dennisjunior111.github.io/dataviz-RocketLeagueStats/)
+Visit my GitHub hosted visualization (currently not building correctly): [https://dennisjunior111.github.io/dataviz-RocketLeagueStats/](https://dennisjunior111.github.io/dataviz-RocketLeagueStats/)
 
 Feel free to visit my original vis, where I conduct my initial testing on, built with block builder: [http://blockbuilder.org/dennisjunior111/1827ab0335776631757b303841682bef](http://blockbuilder.org/dennisjunior111/1827ab0335776631757b303841682bef)
 
