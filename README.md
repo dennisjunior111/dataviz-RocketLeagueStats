@@ -9,7 +9,7 @@ This visualization describes [Rocket League](https://www.rocketleague.com/) stat
 
 # The Data
 ## Data Source
-The original compiled data can be found at [Parallel.GG](rl.parallel.gg), a site to browse Rocket League Championship Series Statistics. I selected a subset of the data hosted here, specifically statistics of the first three seasons of Rocket League's League Play. This data was choosen as it had the largest available public playerbase, and data was consistent over the years. 
+The original compiled data can be found at [Parallel.GG](https://rl.parallel.gg), a site to browse Rocket League Championship Series Statistics. I selected a subset of the data hosted here, specifically statistics of the first three seasons of Rocket League's League Play. This data was choosen as it had the largest available public playerbase, and data was consistent over the years. 
 
 ## Data Pre-Processing
 The raw data found on Parallel.GG first needed to be processed in order to create a vis with it. Data first needed to be merged from multiple web pages into csv format. The website has no download feature, and thus manual web scraping was done. In addition, team data was difficult to extract directly from the web pages. Team logos/urls were posted instead of the actual team names. Since there were not too many individual teams, I updated the team names manually. The processed CSV version of the data can be found on my Github.
